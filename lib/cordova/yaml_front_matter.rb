@@ -22,6 +22,9 @@ class YamlFrontMatter
   end
   
   def run(file_path)
+  
+    #puts file_path
+  
     content = IO.read(file_path)
     yaml    = {}
     

@@ -17,15 +17,16 @@
 
 class JoDoc
   JO_DOC_CLI    = 'jodoc'
-  TEMPLATE_PATH = File.expand_path File.join(File.dirname(__FILE__), '..', '..', 'template', 'docs' )
-  
+  TEMPLATE_PATH = File.expand_path(File.join(File.dirname(__FILE__), '..', '..', 'template', 'docs' ))
+
   attr_accessor :input_directory
   attr_accessor :output_directory
   
   def initialize(input_directory, output_directory, options)
+
     @input_directory      = input_directory
     @output_directory     = output_directory
-    @template_directories = [ File.join TEMPLATE_PATH, 'default' ]
+    @template_directories = [ File.join(TEMPLATE_PATH, 'default') ]
 
     # add custom language template
     if options[:lang]
